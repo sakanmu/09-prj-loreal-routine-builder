@@ -43,13 +43,20 @@
       <div id="productsContainer" class="products-grid"></div>
 
       <!-- Selected Products -->
-      <div class="selected-products">
-        <h2>Selected Products</h2>
-        <div id="selectedProductsList"></div>
-        <button id="generateRoutine" class="generate-btn">
-          <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
-        </button>
-      </div>
+<div class="selected-products">
+  <h2>Selected Products</h2>
+  <div id="selectedProductsList"></div>
+
+  <button id="generateRoutine" class="generate-btn">
+    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
+  </button>
+
+  <button id="clearSelections" class="clear-btn" style="display: none;">
+    Clear All Selections
+  </button>
+</div>
+
+
 
       <!------- Chat Area ------->
       <section class="chatbox">
@@ -88,5 +95,17 @@
     <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
     <script src="secrets.js"></script>
     <script src="script.js"></script>
+
+    <!-- Product Description Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span id="modalClose" class="close">&times;</span>
+    <h3 id="modalProductName"></h3>
+    <p id="modalProductBrand"></p>
+    <p id="modalProductDescription"></p>
+  </div>
+</div>
+
   </body>
 </html>
+
